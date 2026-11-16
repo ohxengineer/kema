@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "Kema. Your ally for reaching your goals",
+    "description": "Feel like you're not moving forward? Kema helps you track your goals and overcome your physical and mental challenges"
+  },
+  "nav": {
+    "today": "Today",
+    "progress": "Progress",
+    "journal": "Journal",
+    "download": "Download"
+  },
+  "header": {
+    "signIn": "Sign in",
+    "language": "Language"
+  },
+  "hero": {
+    "headlineTop": "Not measuring your progress",
+    "headlineBottom": "makes you lose motivation",
+    "description": "lets you track your goals so you can overcome your physical and mental challenges, measure your progress and stay motivated"
+  },
+  "footer": {
+    "credits": "Designed by humans. Assembled in the web"
+  },
+  "app": {
+    "metadata": {
+      "title": "Kema · App"
+    },
+    "today": {
+      "eyebrow": "Today",
+      "title": "Your goals",
+      "summary": "{done} of {total} done",
+      "streak": "Streak",
+      "days": "days",
+      "allDone": "All done for today. Come back tomorrow.",
+      "kinds": {
+        "physical": "Physical",
+        "mental": "Mental"
+      }
+    },
+    "progress": {
+      "title": "Your progress",
+      "week": "This week",
+      "completion": "Completion",
+      "streak": "Current streak",
+      "best": "Best streak",
+      "days": "days",
+      "goals": "Goals",
+      "weekdays": [
+        "M",
+        "T",
+        "W",
+        "T",
+        "F",
+        "S",
+        "S"
+      ]
+    },
+    "journal": {
+      "title": "Journal",
+      "prompt": "How did today go?",
+      "placeholder": "What you achieved, what was hard, what you learned…",
+      "save": "Save",
+      "entries": "Entries",
+      "moods": {
+        "great": "Great",
+        "good": "Good",
+        "meh": "Okay",
+        "hard": "Hard"
+      }
+    }
+  }
+}

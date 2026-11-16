@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "Kema. La herramienta aliada para alcanzar tus objetivos",
+    "description": "¿Sientes que no avanzas? Kema te ayuda a seguir tus objetivos y superar tus retos físicos y mentales"
+  },
+  "nav": {
+    "today": "Hoy",
+    "progress": "Progreso",
+    "journal": "Diario",
+    "download": "Descargar"
+  },
+  "header": {
+    "signIn": "Acceder",
+    "language": "Idioma"
+  },
+  "hero": {
+    "headlineTop": "No medir tu progreso",
+    "headlineBottom": "te hace perder motivación",
+    "description": "permite el seguimiento de tus objetivos para que logres superar tus retos físicos y mentales, medir tu avance y mantenerte motivado"
+  },
+  "footer": {
+    "credits": "Designed by humans. Assembled in the web"
+  },
+  "app": {
+    "metadata": {
+      "title": "Kema · App"
+    },
+    "today": {
+      "eyebrow": "Hoy",
+      "title": "Tus objetivos",
+      "summary": "{done} de {total} hechos",
+      "streak": "Racha",
+      "days": "días",
+      "allDone": "Todo listo por hoy. Vuelve mañana.",
+      "kinds": {
+        "physical": "Físico",
+        "mental": "Mental"
+      }
+    },
+    "progress": {
+      "title": "Tu avance",
+      "week": "Esta semana",
+      "completion": "Cumplimiento",
+      "streak": "Racha actual",
+      "best": "Mejor racha",
+      "days": "días",
+      "goals": "Objetivos",
+      "weekdays": [
+        "L",
+        "M",
+        "M",
+        "J",
+        "V",
+        "S",
+        "D"
+      ]
+    },
+    "journal": {
+      "title": "Diario",
+      "prompt": "¿Cómo te fue hoy?",
+      "placeholder": "Lo que lograste, lo que te costó, lo que aprendiste…",
+      "save": "Guardar",
+      "entries": "Entradas",
+      "moods": {
+        "great": "Genial",
+        "good": "Bien",
+        "meh": "Regular",
+        "hard": "Difícil"
+      }
+    }
+  }
+}
