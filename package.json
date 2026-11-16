@@ -2,6 +2,9 @@
   "name": "kema",
   "version": "0.2.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "bg:process": "node scripts/process-bg.mjs",
     "predev": "npm run bg:process",
