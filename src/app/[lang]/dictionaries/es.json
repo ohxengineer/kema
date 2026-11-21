@@ -25,8 +25,16 @@
     "metadata": {
       "title": "Kema · App"
     },
+    "newGoal": "Nuevo objetivo",
+    "share": "Compartir",
+    "shareText": "Sigo mis objetivos con Kema. ¿Te sumas?",
     "today": {
-      "eyebrow": "Hoy",
+      "day": {
+        "previous": "Día anterior",
+        "next": "Día siguiente",
+        "pick": "Elegir día",
+        "week": "Semana {week}"
+      },
       "title": "Tus objetivos",
       "summary": "{done} de {total} hechos",
       "streak": "Racha",
@@ -35,6 +43,111 @@
       "kinds": {
         "physical": "Físico",
         "mental": "Mental"
+      },
+      "ofGoals": "{done} de {total}",
+      "kr": {
+        "open": "Ver detalle",
+        "thisWeek": "Esta semana",
+        "markDone": "Marcar como hecho",
+        "undo": "Hecho · Deshacer",
+        "close": "Cerrar",
+        "menu": "Más opciones",
+        "update": "Actualizar",
+        "complete": "Marcar como completado",
+        "uncomplete": "Marcar como pendiente"
+      },
+      "objectives": "Tus objetivos",
+      "suggestions": {
+        "title": "Objetivos sugeridos",
+        "cta": "Añadir objetivo",
+        "goTo": "Objetivo sugerido {n} de {total}",
+        "items": [
+          {
+            "eyebrow": "Físico",
+            "title": "Completar 100 km en bici en un día",
+            "meta": "12 semanas",
+            "krs": [
+              "Rodar 3 veces por semana",
+              "Una salida larga cada domingo",
+              "Subir 10 km la salida larga cada 2 semanas"
+            ]
+          },
+          {
+            "eyebrow": "Físico",
+            "title": "Nadar 1,5 km sin parar",
+            "meta": "8 semanas",
+            "krs": [
+              "Nadar 3 veces por semana",
+              "Sumar 100 m por sesión cada semana",
+              "Una clase de técnica al mes"
+            ]
+          },
+          {
+            "eyebrow": "Mental",
+            "title": "Leer 12 libros este año",
+            "meta": "12 meses",
+            "krs": [
+              "Leer 20 páginas al día",
+              "Un libro terminado al mes"
+            ]
+          },
+          {
+            "eyebrow": "Mental",
+            "title": "Tocar una pieza de memoria",
+            "meta": "10 semanas",
+            "krs": [
+              "Practicar 30 min al día",
+              "Memorizar 8 compases por semana",
+              "Tocarla entera para alguien"
+            ]
+          },
+          {
+            "eyebrow": "Físico",
+            "title": "Bajar de 25 minutos en 5 km",
+            "meta": "8 semanas",
+            "krs": [
+              "Correr 3 veces por semana",
+              "Series de 400 m cada martes",
+              "Bajar 15 s por km cada 2 semanas"
+            ]
+          }
+        ]
+      },
+      "addObjective": "Nuevo objetivo",
+      "objective": {
+        "open": "Ver objetivo",
+        "progress": "Progreso esta semana",
+        "keyResults": "Resultados clave",
+        "doneToday": "Hecho hoy",
+        "pending": "Pendiente",
+        "until": "Hasta {date}",
+        "edit": "Editar objetivo"
+      },
+      "filters": {
+        "open": "Filtrar objetivos",
+        "title": "Filtros",
+        "description": "Filtra y ordena tus objetivos",
+        "clear": "Limpiar",
+        "close": "Cerrar",
+        "kind": "Tipo",
+        "kinds": {
+          "physical": "Físico",
+          "mental": "Mental"
+        },
+        "status": "Estado hoy",
+        "statuses": {
+          "all": "Todos",
+          "pending": "Pendientes",
+          "done": "Completados"
+        },
+        "sort": "Ordenar por",
+        "sorts": {
+          "default": "Recomendado",
+          "progress": "Progreso",
+          "name": "Nombre"
+        },
+        "apply": "Mostrar {count} objetivos",
+        "empty": "Ningún objetivo coincide con los filtros."
       }
     },
     "progress": {
@@ -53,7 +166,22 @@
         "V",
         "S",
         "D"
-      ]
+      ],
+      "heatmap": {
+        "checkIn": "Registrar",
+        "monthHistory": "{month}: un punto por día",
+        "last30": "Últimos 30 días",
+        "detail": "Ver detalle"
+      },
+      "year": {
+        "open": "Ver tu año",
+        "title": "Replay ’{yy}",
+        "description": "Cada día tiene sus anillos: físico por fuera y mental por dentro.",
+        "fullDays": "Días completos",
+        "completion": "Cumplimiento",
+        "close": "Cerrar"
+      },
+      "recent": "Últimos 30 días"
     },
     "journal": {
       "title": "Diario",
@@ -67,6 +195,408 @@
         "meh": "Regular",
         "hard": "Difícil"
       }
+    },
+    "streak": {
+      "aria": "Racha: {days} días",
+      "title": "Tu racha",
+      "current": "Racha actual",
+      "best": "Mejor racha",
+      "days": "días",
+      "description": "Días seguidos completando todos tus resultados clave. Si un día no los completas, la racha vuelve a cero.",
+      "close": "Cerrar"
+    },
+    "create": {
+      "title": "Nuevo objetivo",
+      "description": "Define a dónde quieres llegar y los pasos medibles para lograrlo.",
+      "objective": "Objetivo",
+      "objectivePlaceholder": "Ej. Correr 10 km en menos de 50 minutos",
+      "objectiveHint": "Algo ambicioso, con una fecha si puedes.",
+      "kind": "Tipo",
+      "kinds": {
+        "physical": "Físico",
+        "mental": "Mental"
+      },
+      "keyResults": "Resultados clave",
+      "keyResultsHint": "Lo que harás para avanzar. Los marcarás cada día.",
+      "krTitle": "Resultado clave",
+      "krTitlePlaceholder": "Descripción, ej. Correr",
+      "addKr": "Añadir resultado clave",
+      "removeKr": "Quitar KR{n}",
+      "submit": "Crear objetivo",
+      "editTitle": "Editar objetivo",
+      "editDescription": "Cambia lo que necesites. El progreso de tus resultados clave se mantiene.",
+      "save": "Guardar cambios",
+      "deadline": "Fecha límite",
+      "deadlinePick": "Elige una fecha",
+      "krAmount": "Cantidad",
+      "krAmountPlaceholder": "Cantidad",
+      "krUnit": "Unidad",
+      "krUnitPlaceholder": "Unidad, ej. km",
+      "krRepeat": "Repetir",
+      "repeat": {
+        "everyDay": "Todos los días",
+        "weekdays": "Entre semana",
+        "weekends": "Fines de semana",
+        "never": "Nunca"
+      },
+      "catalog": [
+        {
+          "title": "Correr una media maratón antes de junio",
+          "kind": "physical",
+          "keyResults": [
+            {
+              "title": "Correr",
+              "amount": 5,
+              "unit": "km",
+              "days": [
+                0,
+                2,
+                4
+              ]
+            },
+            {
+              "title": "Hacer una tirada larga",
+              "amount": 12,
+              "unit": "km",
+              "days": [
+                6
+              ]
+            },
+            {
+              "title": "Estirar",
+              "amount": 10,
+              "unit": "min",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Correr 10 km en menos de 50 minutos",
+          "kind": "physical",
+          "keyResults": [
+            {
+              "title": "Correr",
+              "amount": 5,
+              "unit": "km",
+              "days": [
+                0,
+                2,
+                4
+              ]
+            },
+            {
+              "title": "Hacer series de 400 m",
+              "amount": 6,
+              "unit": "series",
+              "days": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Completar 100 km en bici en un día",
+          "kind": "physical",
+          "keyResults": [
+            {
+              "title": "Rodar en bici",
+              "amount": 30,
+              "unit": "km",
+              "days": [
+                1,
+                3
+              ]
+            },
+            {
+              "title": "Salida larga en bici",
+              "amount": 60,
+              "unit": "km",
+              "days": [
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Nadar 1,5 km sin parar",
+          "kind": "physical",
+          "keyResults": [
+            {
+              "title": "Nadar",
+              "amount": 1000,
+              "unit": "m",
+              "days": [
+                0,
+                2,
+                4
+              ]
+            },
+            {
+              "title": "Clase de técnica de natación",
+              "amount": 45,
+              "unit": "min",
+              "days": [
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Hacer 20 dominadas seguidas",
+          "kind": "physical",
+          "keyResults": [
+            {
+              "title": "Hacer dominadas",
+              "amount": 5,
+              "unit": "series",
+              "days": [
+                0,
+                2,
+                4
+              ]
+            },
+            {
+              "title": "Entrenar fuerza",
+              "amount": 40,
+              "unit": "min",
+              "days": [
+                1,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Bajar 5 kg de forma saludable",
+          "kind": "physical",
+          "keyResults": [
+            {
+              "title": "Caminar",
+              "amount": 8000,
+              "unit": "pasos",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "title": "Beber agua",
+              "amount": 2,
+              "unit": "litros",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "title": "Entrenar fuerza",
+              "amount": 40,
+              "unit": "min",
+              "days": [
+                0,
+                2,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Dormir mejor durante un mes",
+          "kind": "physical",
+          "keyResults": [
+            {
+              "title": "Dormir",
+              "amount": 8,
+              "unit": "horas",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "title": "Apagar pantallas antes de dormir",
+              "amount": 60,
+              "unit": "min",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Leer 12 libros este año",
+          "kind": "mental",
+          "keyResults": [
+            {
+              "title": "Leer",
+              "amount": 20,
+              "unit": "páginas",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "title": "Terminar un libro",
+              "amount": 1,
+              "unit": "libro",
+              "days": [
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cultivar una mente más tranquila",
+          "kind": "mental",
+          "keyResults": [
+            {
+              "title": "Meditar",
+              "amount": 10,
+              "unit": "min",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "title": "Escribir en el diario",
+              "amount": 3,
+              "unit": "líneas",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tocar una pieza completa al piano",
+          "kind": "mental",
+          "keyResults": [
+            {
+              "title": "Practicar piano",
+              "amount": 30,
+              "unit": "min",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "title": "Memorizar compases",
+              "amount": 8,
+              "unit": "compases",
+              "days": [
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Llegar a nivel B2 de inglés en un año",
+          "kind": "mental",
+          "keyResults": [
+            {
+              "title": "Estudiar inglés",
+              "amount": 30,
+              "unit": "min",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "title": "Conversar en inglés",
+              "amount": 20,
+              "unit": "min",
+              "days": [
+                1,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Aprender a programar en 6 meses",
+          "kind": "mental",
+          "keyResults": [
+            {
+              "title": "Programar",
+              "amount": 45,
+              "unit": "min",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "title": "Terminar un ejercicio",
+              "amount": 1,
+              "unit": "ejercicio",
+              "days": [
+                0,
+                2,
+                4
+              ]
+            }
+          ]
+        }
+      ],
+      "suggestions": "Sugerencias"
     }
   }
 }

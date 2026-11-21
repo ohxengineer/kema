@@ -1,12 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  SmileyIcon,
-  SmileyMehIcon,
-  SmileySadIcon,
-  SmileyWinkIcon,
-} from "@phosphor-icons/react";
+import { SmileyIcon, SmileyMehIcon, SmileySadIcon, SmileyWinkIcon } from "@phosphor-icons/react";
 
 import type { JournalEntry, Mood } from "@/app/_lib/app-sample";
 import type { Locale } from "@/app/_lib/i18n";
@@ -56,8 +51,6 @@ export function Journal({
 
   return (
     <>
-      <h1 className="text-4xl font-black tracking-tight uppercase">{labels.title}</h1>
-
       <section className="flex flex-col gap-3 rounded-xl border bg-neutral-900 p-4">
         <h2 className="font-condensed text-sm font-semibold uppercase">{labels.prompt}</h2>
         <div role="radiogroup" aria-label={labels.prompt} className="grid grid-cols-4 gap-2">
@@ -69,7 +62,7 @@ export function Journal({
               aria-checked={mood === id}
               onClick={() => setMood(id)}
               className={cn(
-                "flex flex-col items-center gap-1 rounded-lg py-2 font-condensed text-xs uppercase transition-colors",
+                "flex flex-col items-center gap-1 rounded-full py-2 font-condensed text-xs uppercase transition-colors",
                 mood === id
                   ? "bg-rose-500/20 text-rose-500"
                   : "bg-white/5 text-neutral-400 hover:text-white",
@@ -91,7 +84,7 @@ export function Journal({
           type="button"
           onClick={save}
           disabled={!mood || !text.trim()}
-          className="h-10 rounded-md bg-rose-500 font-condensed text-sm font-semibold text-neutral-950 uppercase transition-colors hover:bg-rose-400 disabled:bg-white/10 disabled:text-neutral-500"
+          className="h-10 rounded-full bg-rose-500 font-condensed text-sm font-semibold text-neutral-950 uppercase transition-colors hover:bg-rose-400 disabled:bg-white/10 disabled:text-neutral-500"
         >
           {labels.save}
         </button>
@@ -103,7 +96,10 @@ export function Journal({
           {entries.map((entry) => {
             const { Icon } = moods.find((m) => m.id === entry.mood)!;
             return (
-              <li key={entry.id} className="flex flex-col gap-2 rounded-xl border bg-neutral-900 p-4">
+              <li
+                key={entry.id}
+                className="flex flex-col gap-2 rounded-xl border bg-neutral-900 p-4"
+              >
                 <div className="flex items-center justify-between">
                   <span className="font-condensed text-xs text-neutral-400 uppercase">
                     {day.format(new Date(`${entry.date}T12:00`))}

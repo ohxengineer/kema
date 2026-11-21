@@ -12,6 +12,11 @@ export default async function TodayPage({ params }: PageProps<"/[lang]/app">) {
   const data = sample(lang);
 
   return (
-    <TodayGoals lang={lang} goals={data.goals} streak={data.streak} labels={app.today} />
+    <TodayGoals
+      lang={lang}
+      streak={{ current: data.streak, best: data.bestStreak }}
+      streakLabels={app.streak}
+      labels={app.today}
+    />
   );
 }

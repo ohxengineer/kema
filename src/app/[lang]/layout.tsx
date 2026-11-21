@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { IBM_Plex_Sans_Condensed, Inter } from "next/font/google";
+import { Archivo_Narrow, Inter } from "next/font/google";
 
 import { hasLocale, locales } from "@/app/_lib/i18n";
 import { getDictionary } from "./dictionaries";
 import "../globals.css";
 
+// Variable font: weights 100–900 in one file; used by `font-sans`
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter-sans",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-const IBMPlexSansCondensed = IBM_Plex_Sans_Condensed({
+// Variable font: weights 400–700 in one file; used by `font-condensed`
+const archivoNarrow = Archivo_Narrow({
   subsets: ["latin"],
-  variable: "--font-plex-condensed",
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-archivo-narrow",
 });
 
 export function generateStaticParams() {
@@ -47,7 +47,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${inter.variable} ${IBMPlexSansCondensed.variable} font-sans antialiased dark`}
+        className={`${inter.variable} ${archivoNarrow.variable} font-sans antialiased dark`}
       >
         {children}
       </body>

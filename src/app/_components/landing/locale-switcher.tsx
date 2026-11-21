@@ -29,7 +29,8 @@ export default function LocaleSwitcher({ current, label }: { current: Locale; la
             hrefLang={locale}
             aria-current={locale === current ? "true" : undefined}
             className={cn(
-              "transition-colors",
+              // 44×44pt tap target on touch screens (Apple HIG)
+              "transition-colors pointer-coarse:inline-flex pointer-coarse:size-11 pointer-coarse:items-center pointer-coarse:justify-center",
               locale === current ? "text-rose-500" : "text-neutral-500 hover:text-neutral-300",
             )}
           >

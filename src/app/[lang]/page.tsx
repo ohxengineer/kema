@@ -24,7 +24,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <Header dict={dict} />
       <FloatingNav lang={lang} labels={dict.nav} />
       <main>
-        <section className="min-h-dvh tracking-tight p-4 pt-20 pb-24 md:pb-[74px] flex flex-col-reverse gap-3 md:justify-end m-auto md:flex-col">
+        <section className="min-h-dvh tracking-tight p-4 pt-20 pb-[92px] md:pointer-fine:pb-[76px] flex flex-col-reverse gap-3 md:justify-end m-auto md:flex-col">
           <h2 className="uppercase font-black text-4xl md:text-6xl lg:text-7xl hidden md:block">
             {dict.hero.headlineTop} <br /> {dict.hero.headlineBottom}
           </h2>
@@ -34,7 +34,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             </BgSlideshow>
             <div
               aria-hidden
-              className="absolute inset-x-0 bottom-0 h-3/5 backdrop-blur-lg bg-linear-to-t from-neutral-950/90 via-neutral-950/50 to-transparent mask-[linear-gradient(to_top,black_45%,transparent)]"
+              className="absolute inset-x-0 bottom-0 h-1/2 backdrop-blur-lg bg-linear-to-t from-neutral-950/90 via-neutral-950/50 to-transparent mask-[linear-gradient(to_top,black_55%,transparent)]"
             />
             <div className="relative md:w-4/6 lg:w-4/5 leading-tight font-semibold text-xl md:text-4xl mt-10 p-3">
               <h1 className="inline">Kema</h1>{" "}

@@ -3,20 +3,25 @@ import { cn } from "@/app/_lib/utils";
 
 type Effects = {
   defaults: { focal: number[] };
-  images: Record<string, { focal?: number[] }>;
+  images: Record<string, { focal?: number[]; crop?: number[] }>;
 };
 
-/** Where a background's processed files live, and its focal point. */
+/**
+ * Where a background's processed files live, and the point it is cropped
+ * around (`focal`): the image's `crop` point if it has one, else its focal
+ * point.
+ */
 export type BgSource = { webp: string; jpg: string; focal: [number, number] };
 
 /**
  * Resolves a source file name in public/images/bg (e.g. "cyclist.jpg") to
- * its processed version from scripts/process-bg.mjs and its focal point
- * from bg-effects.config.json.
+ * its processed version from scripts/process-bg.mjs and its crop point
+ * from bg-effects.config.json. `crop` frames the photo without moving the
+ * focal point, which process-bg.mjs also uses to keep the subject sharp.
  */
 export function bgSource(src: string): BgSource {
   const { defaults, images } = effects as Effects;
-  const [fx, fy] = images[src]?.focal ?? defaults.focal;
+  const [fx, fy] = images[src]?.crop ?? images[src]?.focal ?? defaults.focal;
   const base = `/images/bg/processed/${src.replace(/\.[^.]+$/, "")}`;
   return { webp: `${base}.webp`, jpg: `${base}.jpg`, focal: [fx, fy] };
 }
